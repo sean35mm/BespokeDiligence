@@ -84,7 +84,7 @@ router.post(
 
 		try {
 			// Using upsert option (creates new doc if no match is found):
-			let profile = await Profile.findOneAndModify(
+			let profile = await Profile.findOneAndUpdate(
 				{ user: req.user.id },
 				{ $set: profileFields },
 				{ new: true, upsert: true, setDefaultsOnInsert: true }
