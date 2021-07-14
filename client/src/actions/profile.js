@@ -1,4 +1,3 @@
-// import api from '../utils/api';
 import axios from 'axios';
 import { setAlert } from './alert';
 
@@ -111,6 +110,8 @@ export const createProfile =
 				errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
 			}
 
+			console.error(err);
+
 			dispatch({
 				type: PROFILE_ERROR,
 				payload: { msg: err.response.statusText, status: err.response.status }
@@ -221,6 +222,7 @@ export const deleteAccount = () => async (dispatch) => {
 
 			dispatch(setAlert('Your account has been permanently deleted'));
 		} catch (err) {
+			console.log(err);
 			dispatch({
 				type: PROFILE_ERROR,
 				payload: { msg: err.response.statusText, status: err.response.status }
