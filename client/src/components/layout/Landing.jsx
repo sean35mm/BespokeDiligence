@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import bgVideo from '../../img/bgvid.mp4';
 
 const Landing = ({ isAuthenticated }) => {
 	if (isAuthenticated) {
@@ -10,6 +11,7 @@ const Landing = ({ isAuthenticated }) => {
 
 	return (
 		<section className='landing'>
+			<video id='myVideo' src={bgVideo} autoPlay muted loop></video>
 			<div className='dark-overlay'>
 				<div className='landing-inner'>
 					<h1 className='x-large'>Bespoke Diligence</h1>

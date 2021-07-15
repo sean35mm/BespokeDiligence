@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
 .m-1 {
 	margin: 1rem;
 }
@@ -82,7 +83,7 @@
 	margin-bottom: 1rem;
 }
 .text-primary {
-	color: #17a2b8;
+	color: #96999b;
 }
 .round-img {
 	border-radius: 50%;
@@ -93,16 +94,17 @@
 	margin: 1.5rem 0;
 }
 .bg-primary {
-	background-color: #17a2b8;
+	background-color: #96999b;
 	color: #fff;
 }
 .bg-light {
 	background-color: #f4f4f4;
 	color: #333;
 	border: #ccc 1px solid;
+	border-radius: 5px;
 }
 .bg-dark {
-	background-color: #343a40;
+	background-color: #434852;
 	color: #fff;
 }
 .bg-success {
@@ -122,27 +124,28 @@
 	display: inline-block;
 	background: #f4f4f4;
 	color: #333;
-	padding: 0.4rem 1.3rem;
+	padding: 0.5rem 1.3rem;
 	border: none;
 	cursor: pointer;
 	font-size: 1rem;
 	margin-right: 0.5rem;
 	outline: none;
 	transition: all 0.2s ease-in;
+	border-radius: 20px;
 }
 .btn.btn-primary {
-	background-color: #17a2b8;
+	background-color: #96999b;
 	color: #fff;
 }
 .btn.btn-primary:hover {
-	background: #1ab6cf;
+	background: #a3a6a7;
 }
 .btn.btn-dark {
-	background-color: #343a40;
+	background-color: #434852;
 	color: #fff;
 }
 .btn.btn-dark:hover {
-	background: #3f474e;
+	background: #4e5460;
 }
 .btn.btn-success {
 	background-color: #28a745;
@@ -159,7 +162,7 @@
 	background: #e04b59;
 }
 .btn:hover {
-	background: #626d78;
+	background: #71798a;
 	color: #fff;
 }
 .alert {
@@ -168,13 +171,14 @@
 	opacity: 0.9;
 	background: #f4f4f4;
 	color: #333;
+	border-radius: 4px;
 }
 .alert.alert-primary {
-	background-color: #17a2b8;
+	background-color: #96999b;
 	color: #fff;
 }
 .alert.alert-dark {
-	background-color: #343a40;
+	background-color: #434852;
 	color: #fff;
 }
 .alert.alert-success {
@@ -194,11 +198,11 @@
 	color: #333;
 }
 .badge.badge-primary {
-	background-color: #17a2b8;
+	background-color: #96999b;
 	color: #fff;
 }
 .badge.badge-dark {
-	background-color: #343a40;
+	background-color: #434852;
 	color: #fff;
 }
 .badge.badge-success {
@@ -224,6 +228,13 @@
 }
 .table th {
 	background: #f4f4f4;
+}
+#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
 }
 .form-group {
 	margin: 1.2rem 0;
@@ -276,7 +287,7 @@
 	padding: 0;
 }
 body {
-	font-family: 'Nunito', sans-serif;
+	font-family: 'Hind', sans-serif;
 	font-size: 1rem;
 	line-height: 1.6;
 	background-color: #fff;
@@ -284,13 +295,16 @@ body {
 }
 a {
 	text-decoration: none;
-	color: #17a2b8;
+	color: #96999b;
 }
 ul {
 	list-style: none;
 }
 img {
 	width: 100%;
+}
+h4 {
+	color: black;
 }
 .navbar {
 	display: flex;
@@ -301,8 +315,7 @@ img {
 	z-index: 1;
 	width: 100%;
 	top: 0;
-	border-bottom: solid 1px #17a2b8;
-	opacity: 0.9;
+	opacity: 0.8;
 }
 .navbar ul {
 	display: flex;
@@ -313,11 +326,10 @@ img {
 	margin: 0 0.25rem;
 }
 .navbar a:hover {
-	color: #17a2b8;
+	color: #96999b;
 }
 .landing {
 	position: relative;
-	background: url('./img/showcase.jpg') no-repeat center center/cover;
 	height: 100vh;
 }
 .landing-inner {
@@ -361,7 +373,7 @@ img {
 	margin: 0 0.3rem;
 }
 .profile-grid .profile-top .icons a:hover {
-	color: #343a40;
+	color: #434852;
 }
 .profile-grid .profile-about {
 	grid-area: about;
@@ -409,6 +421,7 @@ img {
 }
 .post-form-header {
 	padding: 0.5rem;
+	border-radius: 5px;
 }
 .post {
 	display: grid;
