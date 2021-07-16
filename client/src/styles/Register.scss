@@ -1,0 +1,67 @@
+@use 'config' as *;
+@use 'mixins' as *;
+
+.signup {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 5em;
+
+	&__title {
+		font-size: 2rem;
+		color: $dark-color;
+
+		&--header {
+			margin-bottom: 2rem;
+			color: $dark-color;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2rem;
+	}
+
+	&__form-group {
+		padding: 0 0 1rem 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	small {
+		width: 80vw;
+
+		@include tablet {
+			width: 60vw;
+		}
+	}
+
+	input {
+		width: 80vw;
+
+		@include tablet {
+			width: 60vw;
+		}
+	}
+
+	&__btn {
+		background: $dark-color;
+		margin-top: 1rem;
+		color: $light-color;
+		padding: 0.5rem 1.3rem;
+		border: none;
+		cursor: pointer;
+		font-size: 1rem;
+		margin-right: 0.5rem;
+		outline: none;
+		transition: all 0.2s ease-in;
+		border-radius: 20px;
+	}
+
+	&__link {
+		margin-top: 1rem;
+		font-size: 0.75rem;
+	}
+}

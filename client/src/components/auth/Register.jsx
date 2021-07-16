@@ -1,9 +1,10 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
+import '../../styles/Register.scss';
 
 // import axios from 'axios';
 
@@ -33,13 +34,13 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 	}
 
 	return (
-		<Fragment>
-			<h1 className='large text-primary'>Sign Up</h1>
-			<p className='lead'>
+		<section className='signup'>
+			<h1 className='signup__title'>Sign Up</h1>
+			<p className='signup__title--header'>
 				<i className='fas fa-user'></i> Create Your Account
 			</p>
 			<form className='form' onSubmit={(e) => onSubmit(e)}>
-				<div className='form-group'>
+				<div className='signup__form-group'>
 					<input
 						type='text'
 						placeholder='Name'
@@ -49,7 +50,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 						// required
 					/>
 				</div>
-				<div className='form-group'>
+				<div className='signup__form-group'>
 					<input
 						type='email'
 						placeholder='Email Address'
@@ -62,7 +63,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 						This site uses Gravatar, so if you want a profile image, use a Gravatar email
 					</small>
 				</div>
-				<div className='form-group'>
+				<div className='signup__form-group'>
 					<input
 						type='password'
 						placeholder='Password'
@@ -73,7 +74,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 						onChange={(e) => onChange(e)}
 					/>
 				</div>
-				<div className='form-group'>
+				<div className='signup__form-group'>
 					<input
 						type='password'
 						placeholder='Confirm Password'
@@ -84,12 +85,12 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 						onChange={(e) => onChange(e)}
 					/>
 				</div>
-				<input type='submit' value='Register' className='btn btn-primary' />
+				<input type='submit' value='Register' className='signup__btn' />
 			</form>
-			<p className='my-1'>
+			<p className='signup__link'>
 				Already have an account? <Link href='/login'>Sign In</Link>
 			</p>
-		</Fragment>
+		</section>
 	);
 };
 

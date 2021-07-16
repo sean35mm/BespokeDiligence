@@ -1,8 +1,9 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
+import '../../styles/Login.scss';
 
 const Login = ({ login, isAuthenticated }) => {
 	const [formData, setFormData] = useState({
@@ -24,13 +25,13 @@ const Login = ({ login, isAuthenticated }) => {
 	}
 
 	return (
-		<Fragment>
-			<h1 className='large text-primary'>Sign In</h1>
-			<p className='lead'>
+		<section className='login'>
+			<h1 className='login__title'>Sign In</h1>
+			<p className='login__title--header'>
 				<i className='fas fa-user' /> Sign Into Your Account
 			</p>
-			<form className='form' onSubmit={onSubmit}>
-				<div className='form-group'>
+			<form className='login__form' onSubmit={onSubmit}>
+				<div className='login__form-group'>
 					<input
 						type='email'
 						placeholder='Email Address'
@@ -40,7 +41,7 @@ const Login = ({ login, isAuthenticated }) => {
 						required
 					/>
 				</div>
-				<div className='form-group'>
+				<div className='login__form-group'>
 					<input
 						type='password'
 						placeholder='Password'
@@ -50,12 +51,12 @@ const Login = ({ login, isAuthenticated }) => {
 						minLength='6'
 					/>
 				</div>
-				<input type='submit' className='btn btn-primary' value='Login' />
+				<input type='submit' className='login__btn' value='Login' />
 			</form>
-			<p className='my-1'>
+			<p className='login__link'>
 				Don't have an account? <Link to='/register'>Sign Up</Link>
 			</p>
-		</Fragment>
+		</section>
 	);
 };
 

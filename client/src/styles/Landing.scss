@@ -1,0 +1,83 @@
+@use 'config' as *;
+@use 'mixins' as *;
+
+video {
+	object-fit: cover;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -2;
+}
+
+.landing {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5em;
+	color: white;
+
+	@include tablet {
+		margin-top: 15em;
+	}
+
+	a {
+		color: white;
+	}
+
+	&__title {
+		font-size: 4rem;
+		color: white;
+		display: flex;
+		text-align: center;
+
+		@include tablet {
+			font-size: 6rem;
+		}
+	}
+
+	&__hero {
+		text-align: center;
+		margin-top: 2rem;
+
+		@include tablet {
+			font-size: 1.5rem;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		margin-top: 2rem;
+
+		@include tablet {
+			margin-top: 5rem;
+		}
+	}
+
+	.btn,
+	.btn2 {
+		background: $dark-color;
+		color: white;
+		padding: 0.5rem 1.3rem;
+		border: none;
+		cursor: pointer;
+		font-size: 1rem;
+		margin-right: 0.5rem;
+		outline: none;
+		transition: all 0.2s ease-in;
+		border-radius: 20px;
+
+		@include tablet {
+			width: 175px;
+			text-align: center;
+		}
+
+		&:hover {
+			background-color: $light-color;
+			color: $primary-color;
+		}
+	}
+}

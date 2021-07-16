@@ -8,6 +8,7 @@ import ProfileAbout from './ProfileAbout';
 import ProfileExperience from './ProfileExperience';
 import ProfileEducation from './ProfileEducation';
 import { getProfileById } from '../../actions/profile';
+import '../../styles/Profiles.scss';
 
 const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
 	useEffect(() => {

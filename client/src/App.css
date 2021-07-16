@@ -213,14 +213,6 @@
 	background-color: #dc3545;
 	color: #fff;
 }
-.dark-overlay {
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: rgba(0, 0, 0, 0.7);
-}
 .table th,
 .table td {
 	padding: 1rem;
@@ -317,31 +309,8 @@ h4 {
 	top: 0;
 	opacity: 0.8;
 }
-.navbar ul {
-	display: flex;
-}
-.navbar a {
-	color: #fff;
-	padding: 0.45rem;
-	margin: 0 0.25rem;
-}
 .navbar a:hover {
 	color: #96999b;
-}
-.landing {
-	position: relative;
-	height: 100vh;
-}
-.landing-inner {
-	color: #fff;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	width: 80%;
-	margin: auto;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
 }
 .profile {
 	display: grid;
@@ -415,10 +384,7 @@ h4 {
 	flex: 7;
 	flex-basis: 70%;
 }
-.profile-grid .profile-github .repo > div:last-child {
-	flex: 3;
-	flex-basis: 20%;
-}
+
 .post-form-header {
 	padding: 0.5rem;
 	border-radius: 5px;
@@ -435,7 +401,7 @@ h4 {
 .post img {
 	width: 150px;
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 	.hide-sm {
 		display: none;
 	}
@@ -475,7 +441,7 @@ h4 {
 		display: none;
 	}
 	.profile-grid {
-		grid-template-areas: 'top' 'about' 'exp' 'edu' 'github';
+		grid-template-areas: 'top' 'about' 'exp' 'edu';
 	}
 	.profile-about .skills {
 		flex-direction: column;

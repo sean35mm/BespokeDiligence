@@ -1,0 +1,46 @@
+@use 'config' as *;
+@use 'mixins' as *;
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $dark-color;
+	width: 100%;
+	flex-direction: column;
+	padding: 0.7rem 2rem;
+	opacity: 0.9;
+
+	@include tablet {
+		flex-direction: row;
+		padding: 0;
+	}
+
+	.guestLinks {
+		@include tablet {
+			padding-right: 0;
+		}
+	}
+
+	a {
+		color: $light-color;
+		padding: 0.45rem;
+	}
+
+	ul {
+		display: flex;
+		padding: 1rem;
+	}
+
+	li {
+		padding: 0 1rem;
+	}
+
+	.hide-sm {
+		display: none;
+
+		@include tablet {
+			display: inline;
+		}
+	}
+}

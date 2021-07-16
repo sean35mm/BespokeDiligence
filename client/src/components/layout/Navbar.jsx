@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
+import '../../styles/Navbar.scss';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 	const authLinks = (
-		<ul>
+		<ul className='authLinks'>
 			<li>
 				<Link to='/profiles'>Investigators</Link>
 			</li>
@@ -27,7 +28,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 	);
 
 	const guestLinks = (
-		<ul>
+		<ul className='guestLinks'>
 			<li>
 				<Link to='#!'>About</Link>
 			</li>
@@ -41,11 +42,10 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 	);
 
 	return (
-		<nav className='navbar bg-dark'>
+		<nav className='navbar'>
 			<h1>
-				<Link to='/'>
-					{' '}
-					<i className='fas fa-eye'></i> BespokeDiligence
+				<Link to='/' className='navbar__logo'>
+					BespokeDiligence
 				</Link>
 			</h1>
 			{!loading && <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>}

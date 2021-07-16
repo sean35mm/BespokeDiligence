@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { deleteEducation } from '../../actions/profile';
@@ -21,8 +21,8 @@ const Education = ({ education, deleteEducation }) => {
 	));
 
 	return (
-		<Fragment>
-			<h2 className='my-2'>Education Credentials</h2>
+		<div className='dashboard__education'>
+			<h2 className='dashboard__title'>Education Credentials</h2>
 			<table className='table'>
 				<thead>
 					<tr>
@@ -34,7 +34,7 @@ const Education = ({ education, deleteEducation }) => {
 				</thead>
 				<tbody>{educations}</tbody>
 			</table>
-		</Fragment>
+		</div>
 	);
 };
 

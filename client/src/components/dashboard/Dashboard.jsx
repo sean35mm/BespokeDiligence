@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -8,6 +8,8 @@ import { DashboardActions } from './DashboardActions';
 
 import Experience from './Experience';
 import Education from './Education';
+
+import '../../styles/Dashboard.scss';
 
 const Dashboard = ({
 	getCurrentProfile,
@@ -22,32 +24,34 @@ const Dashboard = ({
 	return loading && profile === null ? (
 		<Spinner />
 	) : (
-		<Fragment>
-			<h1 className='large text-primary'>Dashboard</h1>
-			<p className='lead'>
+		<section className='dashboard'>
+			<h1 className='dashboard__title'>Dashboard</h1>
+			<p className='dashboard__title--header'>
 				<i className='fas fa-user'></i> Welcome {user && user.name}
 			</p>
 			{profile !== null ? (
-				<Fragment>
+				<div className='dashboard__main'>
 					<DashboardActions />
 					<Experience experience={profile.experience} />
 					<Education education={profile.education} />
 
-					<div className='my-2'>
-						<button className='btn btn-danger' onClick={() => deleteAccount()}>
+					<div className='dashboard__bottom'>
+						<button className='dashboard__btn' onClick={() => deleteAccount()}>
 							<i className='fas fa-user-minus' /> Delete My Account
 						</button>
 					</div>
-				</Fragment>
+				</div>
 			) : (
-				<Fragment>
-					<p>You have not yet setup a profile, please add some information.</p>
-					<Link to='/create-profile' className='btn btn-primary my-1'>
+				<section className='dashboard__main2'>
+					<p className='dashboard__main2--text'>
+						You have not yet setup a profile, please add some information.
+					</p>
+					<Link className='dashboard__btn2' to='/create-profile'>
 						Create Profile
 					</Link>
-				</Fragment>
+				</section>
 			)}
-		</Fragment>
+		</section>
 	);
 };
 
