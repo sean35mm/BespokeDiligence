@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import bgVideo from '../../img/bgvid.mp4';
+import bgVideo from '../../img/bgvid2.mp4';
 import '../../styles/Landing.scss';
 
 const Landing = ({ isAuthenticated }) => {
@@ -14,7 +14,7 @@ const Landing = ({ isAuthenticated }) => {
 		<section className='landing'>
 			<video id='myVideo' src={bgVideo} autoPlay muted loop></video>
 			<div className='landing__container'>
-				<h1 className='landing__title'>Bespoke Diligence</h1>
+				<h1 className='landing__title'>BespokeDiligence</h1>
 				<p className='landing__hero'>
 					"Modern Investigations. Shaping the Future of Due Diligence Services."
 				</p>

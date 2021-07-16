@@ -45,7 +45,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 		<nav className='navbar'>
 			<h1>
 				<Link to='/' className='navbar__logo'>
-					BespokeDiligence
+					Bd.
 				</Link>
 			</h1>
 			{!loading && <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>}

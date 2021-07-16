@@ -30,7 +30,7 @@ const Login = ({ login, isAuthenticated }) => {
 			<p className='login__title--header'>
 				<i className='fas fa-user' /> Sign Into Your Account
 			</p>
-			<form className='login__form' onSubmit={onSubmit}>
+			<form className='login__form form' onSubmit={onSubmit}>
 				<div className='login__form-group'>
 					<input
 						type='email'

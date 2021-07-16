@@ -1,5 +1,6 @@
 @use 'config' as *;
 @use 'mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap');
 
 video {
 	object-fit: cover;
@@ -31,9 +32,10 @@ video {
 		color: white;
 		display: flex;
 		text-align: center;
+		font-family: 'Libre Caslon Text', serif;
 
 		@include tablet {
-			font-size: 6rem;
+			font-size: 5.5rem;
 		}
 	}
 
