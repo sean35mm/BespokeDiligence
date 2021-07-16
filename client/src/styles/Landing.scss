@@ -16,7 +16,7 @@ video {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 5em;
+	margin-top: 20em;
 	color: white;
 
 	@include tablet {
@@ -28,9 +28,9 @@ video {
 	}
 
 	&__title {
-		font-size: 4rem;
+		font-size: 2rem;
 		color: white;
-		display: flex;
+
 		text-align: center;
 		font-family: 'Libre Caslon Text', serif;
 
